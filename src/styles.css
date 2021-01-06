@@ -20,6 +20,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  border-radius: 5px;
 }
 
 ul,
@@ -45,17 +46,17 @@ input {
     0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 
-.button {
+.btn {
   text-transform: uppercase;
   cursor: pointer;
-  padding: 20px;
+  padding: 10px;
   display: block;
   margin: 0 auto;
   border-radius: 10px;
   font-size: 32px;
   color: #e8e8e8;
-  background-color: #414141;
-  outline-color: #3c4245;
+  background-color: #57caf8;
+  outline-color: #6ab8df;
 }
 .stats {
   border-radius: 5px;
@@ -78,7 +79,7 @@ input {
 .stats-item:not(:last-child) {
   margin-right: 20px;
 }
-.diver {
+.container {
   position: relative;
 }
 .stats-item {
