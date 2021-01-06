@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: rgb(196, 248, 205);
+  background-color: rgb(235, 240, 236);
 }
 
 a {
@@ -34,23 +34,15 @@ ol {
 }
 
 input {
-  background-color: rgb(218, 238, 127);
+  background-color: rgb(251, 252, 247);
   width: 50%;
-  padding: 20px;
+  padding: 10px;
   font-size: 32px;
   font-style: italic;
   border-radius: 10px;
-  outline-color: #3c4245;
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.material-icons {
-  font-size: 28px;
+  outline-color: #363838;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 
 .button {
@@ -66,8 +58,30 @@ input {
   outline-color: #3c4245;
 }
 .stats {
+  border-radius: 5px;
+  background-color: rgba(47, 48, 58, 0.3);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
   display: flex;
-  justify-content: space-between;
-  margin-left: 200px;
-  margin-right: 200px;
+  position: absolute;
+  z-index: 999999;
+  top: 3%;
+  left: 3%;
+}
+.photo-card {
+  width: max-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stats-item:not(:last-child) {
+  margin-right: 20px;
+}
+.diver {
+  position: relative;
+}
+.stats-item {
+  padding: 5px;
+  color: #e8e8e8;
 }

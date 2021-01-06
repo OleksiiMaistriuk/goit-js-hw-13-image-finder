@@ -1,11 +1,11 @@
 
 {{#each this}}
-
-  <img src="{{webformatURL}} "alt="picture" width="100px" />
+<div class="diver">
+  <img src="{{webformatURL}} "alt="picture" />
 
   <div class="stats">
     <p class="stats-item">
-      <i class="material-icons">thumb_up </i>
+      <i class="material-icons md-light md-inactive">thumb_up </i>
      {{likes}}
     </p>
     <p class="stats-item">
@@ -21,7 +21,7 @@
     {{downloads}}
     </p>
   </div>
-
+</div>
   {{/each }}
   
 
