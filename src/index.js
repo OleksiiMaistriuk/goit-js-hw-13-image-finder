@@ -33,9 +33,10 @@ function apdateArticlesMurkup(hits) {
 }
 
 refs.loadMoreButton.addEventListener('click', () => {
+  console.log(document.documentElement.offsetHeight);
   apiService.fetchImages().then(apdateArticlesMurkup);
   window.scrollTo({
-    top: 100,
+    top: document.documentElement.offsetHeight - 1971,
     behavior: 'smooth',
   });
 });
