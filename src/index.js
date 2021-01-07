@@ -16,10 +16,15 @@ refs.searchForm.addEventListener('submit', event => {
   event.preventDefault();
   const form = event.currentTarget;
   apiService.query = form.elements.query.value;
+  refs.loadMoreButton.classList.add('is-hidden');
+  if (apiService.query === '') {
+    return;
+  }
   refs.photoCardConteiner.innerHTML = '';
   form.reset();
   apiService.resetPage();
   apiService.fetchImages().then(apdateArticlesMurkup);
+  refs.loadMoreButton.classList.remove('is-hidden');
 });
 
 function apdateArticlesMurkup(hits) {
@@ -29,4 +34,8 @@ function apdateArticlesMurkup(hits) {
 
 refs.loadMoreButton.addEventListener('click', () => {
   apiService.fetchImages().then(apdateArticlesMurkup);
+  window.scrollTo({
+    top: 100,
+    behavior: 'smooth',
+  });
 });

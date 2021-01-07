@@ -8,13 +8,16 @@ export default {
     )
       .then(response => response.json())
       .then(({ hits }) => {
-        this.pageNumber += 1;
+        this.incrementPage();
         return hits;
       })
       .catch(error => console.log(error));
   },
   resetPage() {
     this.pageNumber = 1;
+  },
+  incrementPage() {
+    this.pageNumber += 1;
   },
   get query() {
     return this.searchQuery;
